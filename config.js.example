@@ -1,0 +1,29 @@
+var config = {};
+
+config.cme = {
+    urls: {
+        auth: 'https://lk.cm.expert/oauth/token', // Url получения токена авторизации
+        stock: 'https://lk.cm.expert/api/v1/dealers/dms/cars' // Url получения спика автомобилей склада
+    },
+    client_id: '******', // Идентификатор дилера
+    client_secret: '******' // Secret дилера
+};
+
+config.db = {
+    server: 'localhost',
+    authentication: {
+        type: 'default',
+        options: {
+            userName: 'cmexpert',
+            password: '123456'
+        }
+    },
+    options: {
+        port: 1433,
+        database: 'cmexpert',
+        //instanceName": 'LAPTOP',
+        trustServerCertificate: true
+    }
+}
+
+module.exports = config;
